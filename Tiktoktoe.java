@@ -2,8 +2,6 @@ package com.bridgelabz;
 import java.util.Scanner;
 
 public class Tiktoktoe {
-    public static int box;
-    public static char ip,ipc;
     public static char[] b=new char[10];
     public static Scanner scan=new Scanner(System.in);
     public static void initializeboard(){
@@ -17,26 +15,6 @@ public class Tiktoktoe {
         b[7]=' ';
         b[8]=' ';
         b[9]=' ';
-    }
-    public static void input() {
-        System.out.println("\nEnter the 'X' or 'O' what you needed:");
-        ip = scan.next().charAt(0);
-        if (ip == 'X' || ip == 'O' || ip == 'x' || ip == 'o')
-        System.out.println("your choice is allocated!!! \n");
-            else {
-            System.out.println("You chose wrong one!!!");
-            input();
-        }
-        if(ip == 'x' )
-            ipc= 'o';
-        else if(ip == 'X')
-            ipc = 'O';
-        else if(ip == 'o' )
-            ipc= 'x';
-        else
-            ipc = 'X';
-        System.out.println("You chose " + ip+" \n");
-        System.out.println("Another player chose " + ipc+" \n");
     }
     public static void showboard()
     {
@@ -53,8 +31,7 @@ public class Tiktoktoe {
     
     public static void main(String[] args) {
         initializeboard();
-        input();
-        
+        showboard();
     }
 
 }
