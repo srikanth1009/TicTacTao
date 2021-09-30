@@ -50,31 +50,11 @@ public class Tiktoktoe {
         System.out.println("|-----------|");
     }
 
-    public static void selectbox()
-    {
-        System.out.println("Select box you need 1 to 9:");
-        box=scan.nextInt();
-        checkbox();
-        showboard();
-    }
-
-    public static void checkbox(){
-        if (box >9 || box <1 ) {
-            System.out.println("you chose wrong box!!!");
-            selectbox();
-        }
-        else if(b[box] !=' ') {
-            System.out.println("The box is Occupied already");
-            selectbox();
-        }
-        else
-            b[box]=ip;
-    }
+    
     public static void main(String[] args) {
         initializeboard();
         input();
-        showboard();
-        selectbox();
+        
     }
 
 }
